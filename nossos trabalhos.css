@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+.container{
+    display: flex; /*para colocar as imagens lado a lado*/
+    align-items: center;
+    justify-content: center; 
+    background-color: #00ceab;/*fundo da imagem*/
+    padding: 20px;
+}
+.white-box{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 22px 2px black;/*para fazer uma sombra ao redor da imagem*/
+}
+.itens{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* (6, 1fr) para fazer a imagens ficar lado a lado*/
+    grid-gap: 30px; /*para distanciar a caixa de imagens*/
+}
+.item{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.product{
+    text-align: center;/*para centralizar o texto*/
+    background-color: #e9eef2;
+    height: 220px;/*para configurar o tamanho das imagens (comprimento)*/
+    width: 100%; /*para configurar o tamanho das imagens (largura)*/
+    border-radius: 5px; /*para retirar as pontas da caixa de imagem)*/
+}
+.product.sale.sell{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #e2401f;
+    color: white;
+    padding: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.item img{ /*para configurar as imagens que estão dentro do item*/
+    margin-top: 10px;
+    height: 90%;
+}
+.item h3 {
+    margin: 0;
+    color: #444;
+    font-size: 1.2rem;
+    margin: 10px 0px 10px 0px;
+}
+.reding{
+    color: red;
+}
+.item span{
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    
+}
+.item button{
+    background-color: #262524;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media (max-width:680px) {
+    .itens{
+        display: block;
+    }
+    .item{
+        margin-bottom: 20px;
+    }
+    .container{
+        height: auto;
+    }
+}
